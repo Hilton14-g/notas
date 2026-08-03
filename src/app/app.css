@@ -1,0 +1,201 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f6f9;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.login-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.heart-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+h2 { color: #1e293b; margin-bottom: 0.2rem; margin-top: 0; }
+p { color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+.input-group { text-align: left; margin-bottom: 1.2rem; }
+label { display: block; font-size: 0.85rem; color: #475569; margin-bottom: 0.4rem; font-weight: 600; }
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+}
+input:focus { border-color: #3b82f6; }
+
+button {
+  width: 100%;
+  padding: 0.85rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+button:hover { background: #1d4ed8; }
+.error { color: #ef4444; font-size: 0.85rem; margin-top: -0.5rem; margin-bottom: 1rem; }
+
+.dashboard-container {
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.header {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.user-badge { color: #334155; font-size: 1rem; }
+.logout-btn {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: #64748b;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  width: auto;
+}
+.logout-btn:hover { background: #f1f5f9; color: #0f172a; }
+
+.content { max-width: 800px; margin: 0 auto; }
+.create-note-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+.create-note-card h3 { color: #1e293b; margin-top: 0; margin-bottom: 1rem; }
+
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+textarea:focus { border-color: #3b82f6; }
+
+.create-note-card button {
+  margin-top: 0.8rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  width: auto;
+}
+.create-note-card button:disabled { background: #94a3b8; cursor: not-allowed; }
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+.note-card {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-left: 5px solid #3b82f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.note-card.hilton-note { border-left-color: #0284c7; }
+.note-card.rous-note { border-left-color: #ec407a; }
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+.note-content { 
+  color: #1e293b; 
+  white-space: pre-wrap; 
+  word-break: break-word; 
+  margin: 0 0 1rem 0; 
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 0.8rem;
+}
+
+.edit-btn, .delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  width: auto;
+}
+.edit-btn { color: #2563eb; }
+.edit-btn:hover { background: #eff6ff; }
+.delete-btn { color: #ef4444; }
+.delete-btn:hover { background: #fef2f2; }
+
+/* Modos de edición */
+.edit-box textarea {
+  margin-bottom: 0.5rem;
+}
+.edit-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+.save-btn {
+  background: #16a34a;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  width: auto;
+  border-radius: 6px;
+}
+.save-btn:hover { background: #15803d; }
+.cancel-btn {
+  background: #64748b;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  width: auto;
+  border-radius: 6px;
+}
+.cancel-btn:hover { background: #475569; }
+
+.empty-msg { text-align: center; color: #64748b; width: 100%; grid-column: 1 / -1; }
